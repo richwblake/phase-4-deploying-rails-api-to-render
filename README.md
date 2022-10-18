@@ -29,7 +29,7 @@ method you prefer then, from the Render dashboard, go ahead and connect Render
 to your GitHub account. Once you've done that, you should see all your repos
 listed in the "Connect a repository" window.
 
-### Install the Latest Ruby Version
+### Install Ruby version 2.7.4
 
 Verify which version of Ruby you're running by entering this in the terminal:
 
@@ -105,19 +105,19 @@ Then enter `control + d` or type `logout` to exit.
 [This guide][postgresql wsl] has more info on setting up Postgres on WSL if you
 get stuck.
 
-#### PostgreSQL Installation for OSX
+#### PostgreSQL Installation for macOS 
 
-To install Postgres for OSX, you can use Homebrew:
+To install Postgres for macOS, you can use Homebrew:
 
 ```console
-$ brew install postgresql
+$ brew install postgresql@14
 ```
 
 Once Postgres has been installed, run this command to start the Postgres
 service:
 
 ```console
-$ brew services start postgresql
+$ brew services start postgresql@14
 ```
 
 Phew! With that out of the way, let's get started on building our Rails
@@ -352,6 +352,9 @@ might want to go get a snack or go for a walk.
 When the deployment is complete, you should see something like this in the log:
 
 ![Log showing successful build and deploy](https://curriculum-content.s3.amazonaws.com/phase-4/deploying-rails-api/successful-deploy-log.png)
+
+To confirm, click on the dashboard button in the top left corner of Render, and you will see the status of all of your Render services.
+You will know everything is ready when you see "Available" next to both the bird-app and your Postgres db.
 
 Click on your app's URL in the upper left corner of the screen (just below the
 name of the app). Once the page has loaded (which may take a few moments), you
